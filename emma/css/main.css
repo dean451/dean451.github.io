@@ -1,0 +1,84 @@
+/*----------------------------------------------------------------------------- 
+=MAIN STYLES  
+-----------------------------------------------------------------------------*/
+
+.banner img {
+	 width: 100%;
+}
+
+.marketing .row {
+	text-align: center;	
+}
+
+.navbar {
+	margin-bottom: 0; /* removes default excess margin */
+}
+
+.divider {
+  margin: 80px 0; 
+}
+
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.companies h3 {
+	margin-bottom: 40px;
+}
+
+.companies img {
+	margin: 50px 0;
+}
+
+footer {
+	background: url('../images/grey-texture.jpg');
+	padding: 40px;
+}
+.scissors {
+	max-height: 800px;
+}
+.brush {
+ 	max-height: 800px;
+}
+.wine {
+	max-height: 800px;
+}
+body {
+	background: #2A2424;
+	color: white;
+}
+#nav {
+	background: #352B2B;
+	border: none;
+}
+#brand {
+	color: white;	
+	word-spacing: 20px;
+	font-family: cursive;
+	text-align: center;
+}
+#contact{
+	color: #8B0000;
+}
+#footer {
+	background: #352B2B;
+	color: white;
+}
+#emmapic {
+	max-height: 300px;
+	max-width: 300px;
+	border-radius: 10px;
+	border: solid 5px white;
+}
+#color {
+  color: #01B7BF;
+}
+#servicespanel{
+	background: #352B2B;
+	color: white;
+}
+#services {
+	background-color: #2A2424;
+}
