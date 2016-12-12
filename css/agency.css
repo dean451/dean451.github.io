@@ -382,9 +382,10 @@ header {
     color: white;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     background-position: 50% 0px;
-    
+    height: auto;
+
 
 
 }
@@ -477,7 +478,7 @@ section h3.section-subheading {
 
 #subheading-text-center {
     text-align: center;
-} 
+}
 
 #tech {
     background-image: url("../img/tile.jpg");
@@ -492,6 +493,7 @@ section h3.section-subheading {
 }
 #hero {
     background-color: #EBEBEB;
+    height: 70rem;
 }
 #about {
     background-color: #EBEBEB;
