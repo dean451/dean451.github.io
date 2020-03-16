@@ -378,16 +378,9 @@ fieldset[disabled] .btn-xl.active {
 }
 
 header {
-    background: url("../img/hero.jpg") fixed;
-    color: white;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    background-repeat: no-repeat;
-    background-position: 50% 0px;
+    background: url("../img/hero.jpg");
+    width: auto;
     height: auto;
-
-
-
 }
 
 header .intro-text {
@@ -493,7 +486,7 @@ section h3.section-subheading {
 }
 #hero {
     background-color: #EBEBEB;
-    height: 70rem;
+    height: 125rem;
 }
 #about {
     background-color: #EBEBEB;
