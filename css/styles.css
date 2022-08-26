@@ -1,3 +1,8 @@
 .credit {
   float:right;
 }
+
+img.icon-padding {
+  padding-left: 4px;
+  padding-right: 4px;
+}
