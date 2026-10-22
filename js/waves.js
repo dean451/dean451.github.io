@@ -9,7 +9,7 @@
     '  validates :total, numericality: { greater_than: 0 }',
     'end',
     'Order.includes(:line_items).where(status: "open").order(created_at: :desc)',
-    'class AddIndexToOrders < ActiveRecord::Migration[7.1]',
+    'class AddIndexToOrders < ActiveRecord::Migration[8.1]',
     '  def change',
     '    add_index :orders, :patient_id',
     '  end',

@@ -44,9 +44,9 @@
       print('container ' + id + ' removed (--rm). no evidence remains.');
     },
     'rails c': function () {
-      print('Loading production environment (Rails 7.1)');
+      print('Loading production environment (Rails 8.1)');
       print('WARNING: you are in production. read twice, run once.');
-      print('type exit to leave.');
+      print('try: Order.count   Order.where(status: "zombie").delete_all   exit');
       setRails(true);
     },
     'rake db:cleanup': function () {
@@ -75,7 +75,7 @@
         print('theme: dark or light');
       }
     } else if (inRails && cmd !== 'exit') {
-      print('=> nil  (dry run, nothing was harmed)');
+      print(/\.count$/.test(cmd) ? '=> 1337' : '=> nil  (dry run, nothing was harmed)');
     } else if (cmd.indexOf('sudo') === 0) {
       print('dean is not in the sudoers file. this incident will be reported.');
     } else if (commands[cmd]) {
@@ -89,7 +89,7 @@
     overlay.hidden = false;
     input.focus();
     if (!output.childNodes.length) {
-      print('welcome. type help.');
+      print('welcome. type help, or try: rails c');
     }
   }
 

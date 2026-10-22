@@ -146,12 +146,6 @@ h1.title.is-1::after {
   }
 }
 
-.status {
-  font-family: monospace;
-  font-size: 0.9rem;
-  opacity: 0.8;
-  margin-bottom: 0.5rem;
-}
 
 .term {
   position: fixed;
