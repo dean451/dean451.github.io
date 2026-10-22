@@ -4,6 +4,8 @@
   var input = document.getElementById('term-input');
   var promptEl = document.getElementById('term-prompt');
   var inRails = false;
+  var history = [];
+  var historyIndex = 0;
 
   function print(text) {
     var line = document.createElement('div');
@@ -110,8 +112,20 @@
 
   input.addEventListener('keydown', function (e) {
     if (e.key === 'Enter') {
+      if (input.value.trim()) {
+        history.push(input.value);
+      }
+      historyIndex = history.length;
       run(input.value);
       input.value = '';
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      historyIndex = Math.max(0, historyIndex - 1);
+      input.value = history[historyIndex] || '';
+    } else if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      historyIndex = Math.min(history.length, historyIndex + 1);
+      input.value = history[historyIndex] || '';
     } else if (e.key === '`') {
       e.preventDefault();
       close();
