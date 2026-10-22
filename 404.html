@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 - NoMethodError</title>
+  <link rel="icon" href="/favicon.png" type="image/x-icon">
+  <style>
+    body { margin: 0; padding: 40px 24px; background: #1c1e21; color: #c9ccd1; font-family: monospace; }
+    h1 { color: #e8a3a3; font-size: 1.4rem; }
+    pre { background: #25282c; border: 1px solid #34373c; padding: 16px; overflow-x: auto; }
+    a { color: #8ab4c9; }
+  </style>
+</head>
+<body>
+  <h1>NoMethodError in PortfolioController#show</h1>
+  <pre>undefined method `page' for nil:NilClass
+
+app/controllers/portfolio_controller.rb:12:in `show'
+  @page = Page.find_by(path: request.path)
+  @page.render   # &lt;-- nil, because this page does not exist
+
+Rails.root: /dean451.github.io
+Request: 404 Not Found</pre>
+  <p>Probably a typo, or I deleted it during a cleanup. <a href="/">Back to the portfolio</a></p>
+</body>
+</html>

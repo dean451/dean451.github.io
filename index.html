@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
-  <title>portfolio</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Dean Palm - full-stack developer and support engineer in Austin, TX">
+  <title>dean@portfolio:~$</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="css/main.bundle.css">
@@ -79,6 +81,7 @@
             <h2 class="subtitle">
               Full-stack developer, Austin, TX
             </h2>
+            <p class="status">currently: cleaning databases for breakfast</p>
             <p>
               <a href="docs/dean_palm_dev.pdf" class="icon has-text-light" target="_blank">
                 <i class="fas fa-file-word"></i> <strong>résumé</strong>
@@ -478,9 +481,15 @@
           <i class="fab fa-github"></i> <strong>@dean451</strong></a>
       </p>
     </div> -->
+    <p class="has-text-centered is-size-7">psst: press ` for a console</p>
   </footer>
   <script src="js/bundle.js"></script>
+  <div id="term" class="term" hidden>
+    <div id="term-output" class="term-output"></div>
+    <div class="term-line"><span id="term-prompt">dean@portfolio:~$ </span><input id="term-input" type="text" autocomplete="off" spellcheck="false" aria-label="console input"></div>
+  </div>
   <script src="js/waves.js"></script>
+  <script src="js/console.js"></script>
 </body>
 
 </html>

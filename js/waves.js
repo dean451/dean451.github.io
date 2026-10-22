@@ -33,6 +33,8 @@
   var rows;
   var text;
   var lastDraw = 0;
+  var mouseCol = -1000;
+  var mouseRow = -1000;
 
   function buildText() {
     text = [];
@@ -63,6 +65,9 @@
       var buckets = ['', '', ''];
       for (var x = 0; x < cols; x++) {
         var v = Math.sin(x * 0.05 + t * 0.0006) + Math.sin(y * 0.2 + x * 0.03 - t * 0.0009) + Math.sin((x + y) * 0.04 + t * 0.0004);
+        var dx = x - mouseCol;
+        var dy = (y - mouseRow) * 2;
+        v += 2.5 * Math.exp(-(dx * dx + dy * dy) / 150);
         var n = (v + 3) / 6;
         var level = n < 0.4 ? -1 : Math.min(2, Math.floor((n - 0.4) / 0.2));
         for (var b = 0; b < 3; b++) {
@@ -83,6 +88,11 @@
     }
     requestAnimationFrame(frame);
   }
+
+  window.addEventListener('mousemove', function (e) {
+    mouseCol = e.clientX / charWidth;
+    mouseRow = e.clientY / cell;
+  });
 
   window.addEventListener('resize', function () {
     resize();
