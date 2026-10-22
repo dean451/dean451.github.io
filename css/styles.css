@@ -6,3 +6,104 @@ img.icon-padding {
   padding-left: 4px;
   padding-right: 4px;
 }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 30;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #34373c;
+  border-radius: 50%;
+  background-color: #25282c;
+  color: #e8eaed;
+  cursor: pointer;
+}
+
+html:not([data-theme="dark"]) .theme-toggle {
+  background-color: #fff;
+  border-color: #dbdbdb;
+  color: #363636;
+}
+
+html[data-theme="dark"] .theme-toggle .icon-moon,
+html:not([data-theme="dark"]) .theme-toggle .icon-sun {
+  display: none;
+}
+
+
+html[data-theme="dark"] body {
+  background-color: #1c1e21;
+  color: #c9ccd1;
+}
+
+html[data-theme="dark"] .title,
+html[data-theme="dark"] .subtitle,
+html[data-theme="dark"] strong,
+html[data-theme="dark"] .heading {
+  color: #e8eaed;
+}
+
+html[data-theme="dark"] a {
+  color: #8ab4c9;
+}
+
+html[data-theme="dark"] a:hover {
+  color: #b9d6e4;
+}
+
+html[data-theme="dark"] hr {
+  background-color: #34373c;
+}
+
+html[data-theme="dark"] .hero.is-primary {
+  background: linear-gradient(135deg, #2b2e33 0%, #1c1e21 100%);
+}
+
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .notification,
+html[data-theme="dark"] .section,
+html[data-theme="dark"] .footer {
+  background-color: #25282c;
+  color: #c9ccd1;
+}
+
+html[data-theme="dark"] .section {
+  background-color: transparent;
+}
+
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .notification {
+  box-shadow: none;
+  border: 1px solid #34373c;
+}
+
+html[data-theme="dark"] .tag:not(body) {
+  background-color: #34373c;
+  color: #c9ccd1;
+}
+
+html[data-theme="dark"] .tag a {
+  color: inherit;
+}
+
+html[data-theme="dark"] code {
+  background-color: #34373c;
+  color: #e8a3a3;
+}
+
+html[data-theme="dark"] .modal-card-head,
+html[data-theme="dark"] .modal-card-body,
+html[data-theme="dark"] .modal-card-foot {
+  background-color: #25282c;
+  color: #c9ccd1;
+}
+
+html[data-theme="dark"] .modal-card-title {
+  color: #e8eaed;
+}
