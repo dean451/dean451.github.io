@@ -37,8 +37,15 @@ html:not([data-theme="dark"]) .theme-toggle .icon-sun {
 }
 
 
-html[data-theme="dark"] body {
+html[data-theme="dark"] {
   background-color: #1c1e21;
+}
+
+body {
+  background-color: transparent;
+}
+
+html[data-theme="dark"] body {
   color: #c9ccd1;
 }
 
@@ -106,4 +113,23 @@ html[data-theme="dark"] .modal-card-foot {
 
 html[data-theme="dark"] .modal-card-title {
   color: #e8eaed;
+}
+
+
+#ascii-waves {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+html[data-theme="dark"] .hero.is-primary {
+  background: linear-gradient(135deg, rgba(43, 46, 51, 0.7) 0%, rgba(28, 30, 33, 0.7) 100%);
+}
+
+.tile.is-child .title {
+  font-size: 1.5rem;
 }
